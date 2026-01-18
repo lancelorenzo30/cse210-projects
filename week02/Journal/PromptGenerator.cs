@@ -4,6 +4,10 @@ public class PromptGenerator
 
     public string GetRandomPrompt()
     {
-        return "chosenPrompt";
+        
+        int randomIndex = Random.Shared.Next(_prompts.Count);
+        string chosenPrompt = _prompts[randomIndex];
+
+        return chosenPrompt;
     }
 }
